@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>script async/defer loading test</title>
+  <script src="async1.js" async></script>
+  <script src="defer1.js" defer></script>
+  <script src="normal1.js"></script>
+  <script src="async2.js" async></script>
+  <script src="defer2.js" defer></script>
+  <script src="normal2.js"></script>
+</head>
+<body>
+  <script>
+    console.log('inline script 1');
+  </script>
+
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, praesentium!</p>
+    <div>
+      <div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, voluptate.</p>
+          <script>
+            console.log('inline script 2');
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    console.log('inline script 3');
+  </script>
+
+  <script src="ready.js"></script>
+
+</body>
+</html>
