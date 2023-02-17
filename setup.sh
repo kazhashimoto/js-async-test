@@ -1,7 +1,7 @@
 #!/bin/bash
 
 src=async1.js
-targets="async2.js defer1.js defer2.js normal1.js normal2.js ready.js"
+targets="async2.js defer1.js defer2.js normal1.js normal2.js ready.js sub1.js sub2.js"
 
 for f in $targets; do
   echo $f
