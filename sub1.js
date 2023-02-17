@@ -6,6 +6,12 @@
   console.log('start:', thisScript,
     'async', document.currentScript.async,
     'defer', document.currentScript.defer);
+  let count = 0;
+  if (document.body) {
+    count = document.body.querySelectorAll('*').length;
+  }
+  console.log('dom count=', count, 'readyState', document.readyState);
+
   const MAX_PRIME = 1000000;
   let quota = 10000;
   const params = new URL(document.location).searchParams;
