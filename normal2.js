@@ -1,5 +1,11 @@
+// Adapted from:
+// https://developer.mozilla.org/ja/docs/Learn/JavaScript/Asynchronous/Introducing
+
 (function() {
-  console.log('start:', document.currentScript.src);
+  const thisScript = document.currentScript.src.slice(0);
+  console.log('start:', thisScript,
+    'async', document.currentScript.async,
+    'defer', document.currentScript.defer);
   const MAX_PRIME = 1000000;
   let quota = 10000;
   const params = new URL(document.location).searchParams;
@@ -9,6 +15,17 @@
     if (isNaN(quota)) {
       quota = 10000;
     }
+  }
+
+  const f = thisScript.match(/\/normal(\d)\.js$/);
+  if (f) {
+    loadSubScript(`sub${f[1]}.js`);
+  }
+
+  function loadSubScript(path) {
+    const el = document.createElement('script');
+    el.src = path;
+    document.querySelector('head').append(el);
   }
 
   function isPrime(n) {
@@ -34,5 +51,5 @@
   }
 
   const primes = generatePrimes(quota);
-  console.log('end  :', document.currentScript.src, primes.length);
+  console.log('end  :', thisScript, primes.length);
 })();
