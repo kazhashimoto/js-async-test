@@ -31,7 +31,7 @@
   function loadSubScript(path) {
     const el = document.createElement('script');
     el.src = path;
-    document.querySelector('head').append(el);
+    document.head.append(el);
   }
 
   function isPrime(n) {
