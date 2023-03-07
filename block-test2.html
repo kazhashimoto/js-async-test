@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>script async/defer loading test</title>
+</head>
+<body>
+  <a href="non-blocking.html">Non blocking</a> |
+  <a href="https://github.com/kazhashimoto/js-async-test">source code</a>
+  <script src="normal1.js"></script>
+
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, praesentium!</p>
+    <div>
+      <script src="async1.js" async></script>
+      <img src="img/photo1.jpg" width="640" height="426" alt="">
+      Photo by <a href="https://unsplash.com/@jbonunsplash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jean-Baptiste D.</a> on <a href="https://unsplash.com/photos/7xPGSJhHJZc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      <div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, voluptate.</p>
+        </div>
+        <img src="img/photo2.jpg" width="640" height="480" alt="">
+        Photo by <a href="https://unsplash.com/@rooke?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katja Rooke</a> on <a href="https://unsplash.com/photos/77JACslA8G0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="normal2.js"></script>
+
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, praesentium!</p>
+    <div>
+        <script src="async2.js" async></script>
+      <img src="img/photo1.jpg" width="640" height="426" alt="">
+      Photo by <a href="https://unsplash.com/@jbonunsplash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jean-Baptiste D.</a> on <a href="https://unsplash.com/photos/7xPGSJhHJZc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      <div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, voluptate.</p>
+        </div>
+        <img src="img/photo2.jpg" width="640" height="480" alt="">
+        Photo by <a href="https://unsplash.com/@rooke?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Katja Rooke</a> on <a href="https://unsplash.com/photos/77JACslA8G0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="ready.js"></script>
+</body>
+</html>
